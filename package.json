@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "morphism",
+  "scripts": {
+    "fp": "lerna exec --scope @morphism/fp --",
+    "fp:test": "npm run fp -- jest",
+    "fp:test:watch": "npm run fp:test -- --watch",
+    "fp:build": "npm run fp -- tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.14",
+    "@types/node": "^10.14.19",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-functional": "^3.0.1",
+    "jest": "^23.6.0",
+    "lerna": "^3.16.4",
+    "nodemon": "^1.19.3",
+    "prettier": "^2.0.1",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@morphism/fp",
+  "description": "@morphism/fp",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morphism-org/morphism.git"
+  },
+  "main": ".dist/index.js",
+  "types": ".dist/index.d.ts",
+  "files": [
+    ".dist"
+  ],
+  "peerDependencies": {
+    "fp-ts": "^2.5.3",
+    "io-ts": "^2.1.2"
+  },
+  "devDependencies": {
+    "fp-ts": "^2.5.3",
+    "io-ts": "^2.1.2"
+  }
+}
