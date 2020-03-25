@@ -3,7 +3,7 @@ export * as Exception from "./Exception";
 export * as JSON from "./JSON";
 export * as List from "./List";
 export * as Option from "./Option";
-export * as IO from "./IO";
+export * as Runtime from "./Runtime";
 export * as TaskEither from "./TaskEither";
 export * as These from "./These";
 
@@ -51,6 +51,7 @@ export {
   hkt as HKT,
   identity as Identity,
   invariant as Invariant,
+  io as IO,
   ioEither as IOEither,
   ioRef as IORef,
   joinSemilattice as JoinSemilattice,
