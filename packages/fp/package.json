@@ -1,7 +1,7 @@
 {
   "name": "@morphism/fp",
   "description": "@morphism/fp",
-  "version": "0.0.1-alpha.1+5fb08d3",
+  "version": "0.0.1-alpha.2+c25d846",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,5 +20,5 @@
     "fp-ts": "^2.5.3",
     "io-ts": "^2.1.2"
   },
-  "gitHead": "5fb08d3e88be4cedf0ff736779ecb1f5f16f37d6"
+  "gitHead": "c25d84604c53b91524f2d64aa67abc539b1cfe3a"
 }
