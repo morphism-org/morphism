@@ -7,10 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
   },
-  "main": ".dist/index.js",
-  "types": ".dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    ".dist"
+    "lib"
   ],
   "peerDependencies": {
     "fp-ts": "^2.5.3",

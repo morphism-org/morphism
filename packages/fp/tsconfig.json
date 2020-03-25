@@ -4,6 +4,7 @@
   "exclude": ["**/*spec*"],
   "compilerOptions": {
     "declaration": true,
-    "outDir": ".dist"
+    "removeComments": false,
+    "outDir": "lib"
   }
 }
