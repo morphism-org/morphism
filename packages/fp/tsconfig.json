@@ -3,6 +3,7 @@
   "include": ["./src/**/*"],
   "exclude": ["**/*spec*"],
   "compilerOptions": {
+    "declaration": true,
     "outDir": ".dist"
   }
 }
