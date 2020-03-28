@@ -1,7 +1,6 @@
 import { Either, flow, identity, JSON, List, Option, pipe, Runtime } from ".";
 
 export * from "io-ts";
-export * from "fp-ts/lib/IO";
 
 export type ToType<
   Definition extends (() => Runtime.Any) | Runtime.Any
