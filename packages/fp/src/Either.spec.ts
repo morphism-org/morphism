@@ -5,7 +5,7 @@ describe("Either", () => {
     throw Error("Oof!"); // eslint-disable-line functional/no-throw-statement
   };
 
-  describe("fromTry", () => {
+  describe("fromUnsafe", () => {
     test.each`
       a                     | expected
       ${() => 1}            | ${Either.right(1)}
