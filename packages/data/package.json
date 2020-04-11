@@ -2,7 +2,8 @@
   "name": "@morphism/data",
   "description": "Basic data types and utilities",
   "license": "MIT",
-  "version": "0.0.1-alpha.39+946928d",
+  "version": "0.0.1-alpha.11+4ef48aa",
+  "gitHead": "4ef48aa954b849a52b719232166f8da2da0de2cd",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
