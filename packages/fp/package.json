@@ -1,8 +1,9 @@
 {
   "name": "@morphism/fp",
   "description": "@morphism/fp",
-  "version": "0.0.1-alpha.6+d0c5429",
   "license": "MIT",
+  "version": "0.0.1-alpha.6+d0c5429",
+  "gitHead": "d0c5429fd6e26e4cc5568844696259bfcef59808",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
@@ -12,6 +13,11 @@
   "files": [
     "lib"
   ],
+  "scripts": {
+    "test": " jest",
+    "test:watch": "npm run test -- --watch",
+    "build": "tsc"
+  },
   "peerDependencies": {
     "fp-ts": "^2.5.3",
     "io-ts": "^2.1.2"
@@ -19,6 +25,5 @@
   "devDependencies": {
     "fp-ts": "^2.5.3",
     "io-ts": "^2.1.2"
-  },
-  "gitHead": "d0c5429fd6e26e4cc5568844696259bfcef59808"
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "name": "@morphism/data",
+  "description": "Basic data types and utilities",
+  "license": "MIT",
+  "version": "0.0.1-alpha.39+946928d",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morphism-org/morphism.git"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@morphism/fp": "0.0.1-alpha.9+e32f25d"
+  },
+  "dependencies": {
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@morphism/fp": "0.0.1-alpha.9+e32f25d",
+    "@types/uuid": "^7.0.2",
+    "fp-ts": "^2.5.3",
+    "io-ts": "^2.1.2"
+  }
+}

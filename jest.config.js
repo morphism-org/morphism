@@ -19,5 +19,5 @@ module.exports = {
 
     `import * as <Package> from "<rootDir>/packages/<package>/src";`
   */
-  moduleNameMapper: { "~(.*)$": "<rootDir>/packages/$1/src" }
+  moduleNameMapper: { "~(.*)$": "<rootDir>/packages/$1/src" },
 };
