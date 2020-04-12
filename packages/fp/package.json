@@ -2,8 +2,8 @@
   "name": "@morphism/fp",
   "description": "@morphism/fp",
   "license": "MIT",
-  "version": "0.0.1-alpha.11+4ef48aa",
-  "gitHead": "4ef48aa954b849a52b719232166f8da2da0de2cd",
+  "version": "0.0.1-alpha.12+b656a4e",
+  "gitHead": "b656a4efc96c4265f1e391c809ca4b79dacb242a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
@@ -14,7 +14,7 @@
     "lib"
   ],
   "scripts": {
-    "test": " jest",
+    "test": "jest",
     "test:watch": "npm run test -- --watch",
     "build": "tsc"
   },
@@ -23,6 +23,15 @@
     "io-ts": "^2.1.2"
   },
   "devDependencies": {
+    "typescript": "^3.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-functional": "^3.0.1",
+    "@typescript-eslint/parser": "^2.27.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "@types/jest": "^25.2.1",
     "fp-ts": "^2.5.3",
     "io-ts": "^2.1.2"
   }

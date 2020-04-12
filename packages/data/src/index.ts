@@ -1,13 +1,9 @@
-import { pipe, IO } from "@morphism/fp";
+import { IO } from "@morphism/fp";
 
 import { v4 as uuidV4 } from "uuid";
 
-export const x = pipe;
-
 export namespace Reference {
-  export type Reference =
-    | { readonly id: ID.Unsafe.Unsafe }
-    | { readonly uuid: ID.UUID.UUID };
+  export type Reference = { readonly id: ID.ID };
 }
 
 export namespace ID {
