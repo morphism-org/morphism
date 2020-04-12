@@ -10,14 +10,6 @@
     "fp:build": "npm run fp -- npm run build"
   },
   "devDependencies": {
-    "lerna": "^3.16.4",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-functional": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
-    "@types/jest": "^23.3.14"
+    "lerna": "^3.16.4"
   }
 }
