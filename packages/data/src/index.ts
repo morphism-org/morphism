@@ -10,7 +10,7 @@ export namespace ID {
   export type ID = UUID.UUID | Unsafe.Unsafe;
 
   export namespace UUID {
-    /** [RFC v4 UUID](https://tools.ietf.org/html/rfc4122) */
+    /** [RFC V4 UUID](https://tools.ietf.org/html/rfc4122) */
     export type UUID = string;
     export const uuid: IO.IO<string> = () => uuidV4();
   }
