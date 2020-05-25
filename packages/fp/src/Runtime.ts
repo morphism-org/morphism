@@ -1,46 +1,64 @@
-import { Either, flow, JSON, List, Option, pipe, Runtime } from ".";
+import { Either, flow, JSON, ReadonlyArray, Option, pipe, Runtime } from ".";
+
+import * as T from "io-ts";
+import * as NumberFromString from "io-ts-types/lib/NumberFromString";
+import * as IntFromString from "io-ts-types/lib/IntFromString";
+import * as BooleanFromString from "io-ts-types/lib/BooleanFromString";
+import * as NonEmptyString from "io-ts-types/lib/NonEmptyString";
+import * as DateFromISOString from "io-ts-types/lib/DateFromISOString";
+import * as DateFromUnixTime from "io-ts-types/lib/DateFromUnixTime";
+import * as DateFromNumber from "io-ts-types/lib/DateFromNumber";
+import * as RegularExpression from "io-ts-types/lib/regexp";
+import * as UUID from "io-ts-types/lib/UUID";
 
 export * from "io-ts";
 
-// HOCs to replace aspects of existing runtime types
 export * from "io-ts-types/lib/withValidate";
 export * from "io-ts-types/lib/withMessage";
 export * from "io-ts-types/lib/withFallback";
 
-// Runtime primitives
-export * from "io-ts-types/lib/NumberFromString";
-export * from "io-ts-types/lib/IntFromString";
-export * from "io-ts-types/lib/BooleanFromString";
-export * from "io-ts-types/lib/NonEmptyString";
-
-// Runtime non-primitives
-export * from "io-ts-types/lib/DateFromISOString";
-export * from "io-ts-types/lib/DateFromUnixTime";
-export * from "io-ts-types/lib/DateFromNumber";
-export * from "io-ts-types/lib/regexp";
-export * from "io-ts-types/lib/UUID";
-
-// Runtime collections
 export * from "io-ts-types/lib/nonEmptyArray";
 export * from "io-ts-types/lib/setFromArray";
 
-// Runtime helpers
 export * from "io-ts-types/lib/fromRefinement";
 export * from "io-ts-types/lib/fromNullable";
 export * from "io-ts-types/lib/mapOutput";
-export * from "io-ts-types/lib/clone";
 
-// Runtime fp-ts types
 export * from "io-ts-types/lib/option";
 export * from "io-ts-types/lib/optionFromNullable";
 export * from "io-ts-types/lib/either";
 
+/** @deprecated Use `bigInt` instead */
+export declare const bigint: unknown;
+
+/** @deprecated Use `int` instead */
+export declare const Int: unknown;
+
+export const boolean = () => T.boolean;
+export const string = () => T.string;
+export const number = () => T.number;
+export const bigInt = () => T.bigint;
+export const int = () => T.Int;
+
+export const unknownArray = () => T.UnknownArray;
+export const unknownRecord = () => T.UnknownRecord;
+
+export const numberFromString = () => NumberFromString.NumberFromString;
+export const intFromString = () => IntFromString.IntFromString;
+export const booleanFromString = () => BooleanFromString.BooleanFromString;
+export const nonEmptyString = () => NonEmptyString.NonEmptyString;
+export const dateFromISOString = () => DateFromISOString.DateFromISOString;
+export const dateFromUnixTime = () => DateFromUnixTime.DateFromUnixTime;
+export const dateFromNumber = () => DateFromNumber.DateFromNumber;
+export const regularExpression = () => RegularExpression.regexp;
+export const uuid = () => UUID.UUID;
+
 export type ToType<
-  Definition extends (() => Runtime.Any) | Runtime.Any
-> = Definition extends () => Runtime.Any
-  ? Runtime.TypeOf<ReturnType<Definition>>
-  : Definition extends Runtime.Any
-  ? Runtime.TypeOf<Definition>
+  A extends (() => Runtime.Any) | Runtime.Any
+> = A extends () => Runtime.Any
+  ? Runtime.TypeOf<ReturnType<A>>
+  : A extends Runtime.Any
+  ? Runtime.TypeOf<A>
   : never;
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
@@ -48,17 +66,14 @@ export const nullable = <Definition extends Runtime.Any>(
   definition: Definition
 ) => Runtime.union([definition, Runtime.null, Runtime.undefined]);
 
-export const decode = <
-  Definition extends Runtime.Any,
-  A extends ToType<Definition>
->(
-  definition: Definition
+export const decode = <A extends ToType<Runtime>, Runtime extends Runtime.Any>(
+  runtime: Runtime
 ) => (value?: Option.Nullable<unknown>): Either.ErrorOr<A> =>
   pipe(
-    definition.decode(value),
+    runtime.decode(value),
     Either.mapLeft(
-      flow(List.filterMap(errorMessage), (messages) =>
-        Error(messages.join("\n\n"))
+      flow(ReadonlyArray.filterMap(errorMessage), (messages) =>
+        Error(messages.join("\n"))
       )
     )
   );
@@ -67,7 +82,7 @@ export const errorMessage = (
   error: Runtime.ValidationError
 ): Option.Option<string> =>
   pipe(
-    List.head(error.context),
+    ReadonlyArray.head(error.context),
     Option.map((context) => {
       const path = error.context
         .map((context) => context.key)

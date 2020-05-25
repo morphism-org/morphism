@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["../../.eslintrc", "plugin:react/recommended"],
+  "parserOptions": { "project": "./tsconfig.json" }
+}

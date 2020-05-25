@@ -18,26 +18,4 @@ describe("Either", () => {
       expect(Either.fromUnsafe(a)).toEqual(expected)
     );
   });
-
-  describe("do-notation", () => {
-    test.each`
-      one                   | two                   | expected
-      ${() => 1}            | ${() => 2}            | ${3}
-      ${() => throwError()} | ${() => 2}            | ${-1}
-      ${() => 1}            | ${() => throwError()} | ${-1}
-      ${() => throwError()} | ${() => throwError()} | ${-1}
-    `("`one` + `two` = `$expected`", ({ one, two, expected }) => {
-      const doNotation = Either.do
-        .bind("one", Either.fromUnsafe<number>(one))
-        .bind("two", Either.fromUnsafe<number>(two))
-        .return(({ one, two }) => one + two);
-
-      const result = pipe(
-        doNotation,
-        Either.getOrElse(() => -1)
-      );
-
-      expect(result).toEqual(expected);
-    });
-  });
 });

@@ -1,7 +1,6 @@
 export * as Either from "./Either";
 export * as Exception from "./Exception";
 export * as JSON from "./JSON";
-export * as List from "./List";
 export * as Option from "./Option";
 export * as Runtime from "./Runtime";
 export * as TaskEither from "./TaskEither";
