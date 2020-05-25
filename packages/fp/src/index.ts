@@ -110,5 +110,7 @@ export {
 
 export declare const hole: <A>() => A;
 
+declare const console: any;
 export const spy = <A>(a: A): A => void console.log(a) ?? a;
+
 export const identity = <A>(a: A): A => a;
