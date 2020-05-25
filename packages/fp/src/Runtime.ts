@@ -34,11 +34,17 @@ export declare const bigint: unknown;
 /** @deprecated Use `int` instead */
 export declare const Int: unknown;
 
+/** @deprecated Use `int` instead */
+export declare const Function: unknown;
+
 export const boolean = () => T.boolean;
 export const string = () => T.string;
 export const number = () => T.number;
 export const bigInt = () => T.bigint;
 export const int = () => T.Int;
+
+const fn = () => T.Function;
+export { fn as function };
 
 export const unknownArray = () => T.UnknownArray;
 export const unknownRecord = () => T.UnknownRecord;
