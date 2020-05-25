@@ -10,6 +10,6 @@
     "fp:build": "npm run fp -- npm run build"
   },
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": " ^3.22.0"
   }
 }
