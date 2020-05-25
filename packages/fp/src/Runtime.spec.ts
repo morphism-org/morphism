@@ -12,7 +12,7 @@ describe("Runtime", () => {
       const rightsWithMaybes: ReadonlyArray<Option.Nullable<unknown>> = [
         ...rights,
         null,
-        undefined
+        undefined,
       ];
 
       expect(List.rights(decodeValues(lefts)).length).toEqual(0);

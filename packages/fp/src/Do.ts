@@ -1,5 +1,5 @@
-import * as Either from "fp-ts/lib/Either"
-import * as TaskEither from "fp-ts/lib/TaskEither"
+import * as Either from "fp-ts/lib/Either";
+import * as TaskEither from "fp-ts/lib/TaskEither";
 import { Do } from "fp-ts-contrib/lib/Do";
 
 /**

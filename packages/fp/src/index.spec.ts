@@ -21,7 +21,7 @@ describe("hole", () => {
         string: hole(),
         function: hole(),
         object: hole(),
-        array: hole()
+        array: hole(),
       })
     ).toThrow());
 
@@ -36,7 +36,7 @@ describe("spy", () => {
       string: spy("a"),
       function: spy(() => 1),
       object: spy({ sup: "my dude" }),
-      array: spy([])
+      array: spy([]),
     })).toBeDefined());
 
   test.each`

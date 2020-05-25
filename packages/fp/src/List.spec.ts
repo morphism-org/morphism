@@ -9,7 +9,7 @@ describe("List", () => {
     ...booleans,
     ...numbers,
     ...strings,
-    ...objects
+    ...objects,
   ];
 
   describe("nonNullables", () => {
