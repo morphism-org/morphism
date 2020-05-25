@@ -106,7 +106,7 @@ export {
   validationT as ValidationT,
   witherable as Witherable,
   writer as Writer,
-  writerT as WriterT
+  writerT as WriterT,
 } from "fp-ts";
 
 export declare const hole: <A>() => A;

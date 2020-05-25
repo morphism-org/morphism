@@ -1,5 +1,6 @@
 import { Either, Exception, Fn } from ".";
 
+export { forEither as do } from "./Do";
 export * from "fp-ts/lib/Either";
 
 export type ErrorOr<A, E extends Error = Error> = Either.Either<E, A>;
