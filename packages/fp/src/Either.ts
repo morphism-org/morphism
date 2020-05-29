@@ -1,4 +1,4 @@
-import { Do as doNotationFor } from "fp-ts-contrib/lib/Do";
+import { Do as doNotationFrom } from "fp-ts-contrib/lib/Do";
 
 import { Either, Exception, Fn } from ".";
 
@@ -10,7 +10,7 @@ export type ErrorsOr<
   E extends readonly Error[] = readonly Error[]
 > = Either.Either<E, A>;
 
-const doNotation = () => doNotationFor(Either.either);
+const doNotation = () => doNotationFrom(Either.either);
 export { doNotation as do };
 
 export const fromUnsafe = <A>(fn: Fn.Lazy<A>): ErrorOr<A> =>

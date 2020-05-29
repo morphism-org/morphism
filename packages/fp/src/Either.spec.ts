@@ -1,4 +1,4 @@
-import { Either, pipe } from ".";
+import { Either } from ".";
 
 describe("Either", () => {
   const throwError = (): never => {

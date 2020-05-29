@@ -1,5 +1,4 @@
-import { Either, Task, TaskEither } from ".";
-import { pipe } from "./index";
+import { Either, TaskEither } from ".";
 
 describe("TaskEither", () => {
   describe("fromUnsafe", () => {
