@@ -5,6 +5,7 @@ import * as NumberFromString from "io-ts-types/lib/NumberFromString";
 import * as IntFromString from "io-ts-types/lib/IntFromString";
 import * as BooleanFromString from "io-ts-types/lib/BooleanFromString";
 import * as NonEmptyString from "io-ts-types/lib/NonEmptyString";
+import * as Date from "io-ts-types/lib/date";
 import * as DateFromISOString from "io-ts-types/lib/DateFromISOString";
 import * as DateFromUnixTime from "io-ts-types/lib/DateFromUnixTime";
 import * as DateFromNumber from "io-ts-types/lib/DateFromNumber";
@@ -53,9 +54,12 @@ export const numberFromString = () => NumberFromString.NumberFromString;
 export const intFromString = () => IntFromString.IntFromString;
 export const booleanFromString = () => BooleanFromString.BooleanFromString;
 export const nonEmptyString = () => NonEmptyString.NonEmptyString;
+
+export const date = () => Date.date;
 export const dateFromISOString = () => DateFromISOString.DateFromISOString;
 export const dateFromUnixTime = () => DateFromUnixTime.DateFromUnixTime;
 export const dateFromNumber = () => DateFromNumber.DateFromNumber;
+
 export const regularExpression = () => RegularExpression.regexp;
 export const uuid = () => UUID.UUID;
 

@@ -29,9 +29,6 @@
     "resolveJsonModule": true,
 
     // Don't check the types of our dependencies
-    "skipLibCheck": true,
-
-    // Allow React-style JSX
-    "jsx": "react"
+    "skipLibCheck": true
   }
 }
