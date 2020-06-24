@@ -1,6 +1,7 @@
 export * as Either from "./Either";
 export * as Exception from "./Exception";
 export * as JSON from "./JSON";
+export * as NonEmptyArray from "./NonEmptyArray";
 export * as Option from "./Option";
 export * as Runtime from "./Runtime";
 export * as TaskEither from "./TaskEither";
@@ -63,7 +64,6 @@ export {
   monadTask as MonadTask,
   monadThrow as MonadThrow,
   monoid as Monoid,
-  nonEmptyArray as NonEmptyArray,
   optionT as OptionT,
   ord as Ord,
   ordering as Ordering,
