@@ -29,17 +29,27 @@ export * from "io-ts-types/lib/option";
 export * from "io-ts-types/lib/optionFromNullable";
 export * from "io-ts-types/lib/either";
 
+/** @deprecated Use `literalNull` instead */
+export declare const nullType: unknown;
+
 /** @deprecated Use `bigInt` instead */
 export declare const bigint: unknown;
 
 /** @deprecated Use `int` instead */
 export declare const Int: unknown;
 
-/** @deprecated Use `int` instead */
+/** @deprecated Use `function` instead */
 export declare const Function: unknown;
+
+export const never = () => T.never;
+
+export const undefined = () => T.undefined;
+export const literalNull = () => T.null;
+export { literalNull as null };
 
 export const boolean = () => T.boolean;
 export const string = () => T.string;
+
 export const number = () => T.number;
 export const bigInt = () => T.bigint;
 export const int = () => T.Int;
@@ -74,7 +84,7 @@ export type ToType<
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const nullable = <Definition extends Runtime.Any>(
   definition: Definition
-) => Runtime.union([definition, Runtime.null, Runtime.undefined]);
+) => Runtime.union([definition, Runtime.null(), Runtime.undefined()]);
 
 export const decode = <A extends ToType<Runtime>, Runtime extends Runtime.Any>(
   runtime: Runtime
