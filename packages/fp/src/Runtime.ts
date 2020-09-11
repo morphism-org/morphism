@@ -1,4 +1,5 @@
-import { Either, flow, JSON, ReadonlyArray, Option, pipe, Runtime } from ".";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { Either, flow, JSON, Option, pipe, ReadonlyArray, Runtime } from ".";
 
 import * as T from "io-ts";
 import * as NumberFromString from "io-ts-types/lib/NumberFromString";
@@ -43,6 +44,7 @@ export declare const Function: unknown;
 
 export const never = () => T.never;
 
+// eslint-disable-next-line no-shadow-restricted-names
 export const undefined = () => T.undefined;
 export const literalNull = () => T.null;
 export { literalNull as null };
@@ -98,9 +100,7 @@ export const decode = <A extends ToType<Runtime>, Runtime extends Runtime.Any>(
     )
   );
 
-export const errorMessage = (
-  error: Runtime.ValidationError
-): Option<string> =>
+export const errorMessage = (error: Runtime.ValidationError): Option<string> =>
   pipe(
     ReadonlyArray.head(error.context),
     Option.map((context) => {
