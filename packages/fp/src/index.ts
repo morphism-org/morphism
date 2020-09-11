@@ -1,17 +1,11 @@
-import { Either } from "./Either";
-
 export { Either } from "./Either";
 export * as Exception from "./Exception";
 export * as JSON from "./JSON";
-export * as NonEmptyArray from "./NonEmptyArray";
-export * as Option from "./Option";
+export { NonEmptyArray } from "./NonEmptyArray";
+export { Option } from "./Option";
 export * as Runtime from "./Runtime";
-export * as TaskEither from "./TaskEither";
-export * as These from "./These";
-
-const x = Either.do()
-  .bind("", () => {})
-  .done();
+export { TaskEither } from "./TaskEither";
+export { These } from "./These";
 
 export { pipe } from "fp-ts/lib/pipeable";
 export { flow } from "fp-ts/lib/function";
@@ -117,6 +111,7 @@ export {
 export declare const hole: <A>() => A;
 
 declare const console: any;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 export const spy = <A>(a: A): A => void console.log(a) ?? a;
 
 export const identity = <A>(a: A): A => a;

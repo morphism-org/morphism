@@ -1,10 +1,82 @@
-import { Do as doNotationFrom } from "fp-ts-contrib/lib/Do";
-
-import { Option } from ".";
+import * as BaseOption from "fp-ts/Option";
 
 export * from "fp-ts/lib/Option";
 
-export type Nullable<A> = A | null | undefined;
+export type Option<A> = BaseOption.None | BaseOption.Some<A>;
+// export import Option = BaseOption.Option;
 
-const doNotation = () => doNotationFrom(Option.option);
-export { doNotation as do };
+export namespace Option {
+  export type Nullable<A> = A | null | undefined;
+
+  export import isSome = BaseOption.isSome;
+  export import isNone = BaseOption.isNone;
+  export import none = BaseOption.none;
+  export import some = BaseOption.some;
+  export import fromNullable = BaseOption.fromNullable;
+  export import fromPredicate = BaseOption.fromPredicate;
+  export import tryCatch = BaseOption.tryCatch;
+  export import getLeft = BaseOption.getLeft;
+  export import getRight = BaseOption.getRight;
+  export import fromEither = BaseOption.fromEither;
+  export import fold = BaseOption.fold;
+  export import toNullable = BaseOption.toNullable;
+  export import toUndefined = BaseOption.toUndefined;
+  export import getOrElseW = BaseOption.getOrElseW;
+  export import getOrElse = BaseOption.getOrElse;
+  export import mapNullable = BaseOption.mapNullable;
+  export import map = BaseOption.map;
+  export import ap = BaseOption.ap;
+  export import apFirst = BaseOption.apFirst;
+  export import apSecond = BaseOption.apSecond;
+  export import of = BaseOption.of;
+  export import chain = BaseOption.chain;
+  export import chainFirst = BaseOption.chainFirst;
+  export import flatten = BaseOption.flatten;
+  export import alt = BaseOption.alt;
+  export import zero = BaseOption.zero;
+  export import throwError = BaseOption.throwError;
+  export import extend = BaseOption.extend;
+  export import duplicate = BaseOption.duplicate;
+  export import reduce = BaseOption.reduce;
+  export import foldMap = BaseOption.foldMap;
+  export import reduceRight = BaseOption.reduceRight;
+  export import compact = BaseOption.compact;
+  export import separate = BaseOption.separate;
+  export import filter = BaseOption.filter;
+  export import filterMap = BaseOption.filterMap;
+  export import partition = BaseOption.partition;
+  export import partitionMap = BaseOption.partitionMap;
+  export import traverse = BaseOption.traverse;
+  export import sequence = BaseOption.sequence;
+  export import wither = BaseOption.wither;
+  export import wilt = BaseOption.wilt;
+  export import getShow = BaseOption.getShow;
+  export import getEq = BaseOption.getEq;
+  export import getOrd = BaseOption.getOrd;
+  export import getApplySemigroup = BaseOption.getApplySemigroup;
+  export import getApplyMonoid = BaseOption.getApplyMonoid;
+  export import getFirstMonoid = BaseOption.getFirstMonoid;
+  export import getLastMonoid = BaseOption.getLastMonoid;
+  export import getMonoid = BaseOption.getMonoid;
+  export import Functor = BaseOption.Functor;
+  export import Applicative = BaseOption.Applicative;
+  export import Monad = BaseOption.Monad;
+  export import Foldable = BaseOption.Foldable;
+  export import Alt = BaseOption.Alt;
+  export import Alternative = BaseOption.Alternative;
+  export import Extend = BaseOption.Extend;
+  export import Compactable = BaseOption.Compactable;
+  export import Filterable = BaseOption.Filterable;
+  export import Traversable = BaseOption.Traversable;
+  export import Witherable = BaseOption.Witherable;
+  export import MonadThrow = BaseOption.MonadThrow;
+  export import option = BaseOption.option;
+  export import elem = BaseOption.elem;
+  export import exists = BaseOption.exists;
+  export import getRefinement = BaseOption.getRefinement;
+  export import bindTo = BaseOption.bindTo;
+  export import bind = BaseOption.bind;
+}
+
+// const doNotation = () => doNotationFrom(Option.option);
+// export { doNotation as do };

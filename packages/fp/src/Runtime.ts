@@ -100,7 +100,7 @@ export const decode = <A extends ToType<Runtime>, Runtime extends Runtime.Any>(
 
 export const errorMessage = (
   error: Runtime.ValidationError
-): Option.Option<string> =>
+): Option<string> =>
   pipe(
     ReadonlyArray.head(error.context),
     Option.map((context) => {
