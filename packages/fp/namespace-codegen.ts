@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 
 console.log("Args: ", args);
 
-const importAliasToFpTsFile = `Base${args[0]}`;
+const baseImportAlias = `Base${args[0]}`;
 
 // Find file
 const fptsFile = Path.resolve(
@@ -69,7 +69,7 @@ statementsWithoutAmbientContext.forEach((statement) => {
   if (functionName && !fnNameToExportStatement.has(functionName)) {
     fnNameToExportStatement.set(
       functionName,
-      `export import ${functionName} = ${importAliasToFpTsFile}.${functionName}`
+      `export import ${functionName} = ${baseImportAlias}.${functionName}`
     );
   }
 });
