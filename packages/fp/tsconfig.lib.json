@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["**/*spec*"],
+  "exclude": ["**/*spec*", "./namespace-codegen.ts"],
   "compilerOptions": {
     "declaration": true,
     "removeComments": false,
