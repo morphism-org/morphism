@@ -1,4 +1,6 @@
-export * as Either from "./Either";
+import { Either } from "./Either";
+
+export { Either } from "./Either";
 export * as Exception from "./Exception";
 export * as JSON from "./JSON";
 export * as NonEmptyArray from "./NonEmptyArray";
@@ -6,6 +8,10 @@ export * as Option from "./Option";
 export * as Runtime from "./Runtime";
 export * as TaskEither from "./TaskEither";
 export * as These from "./These";
+
+const x = Either.do()
+  .bind("", () => {})
+  .done();
 
 export { pipe } from "fp-ts/lib/pipeable";
 export { flow } from "fp-ts/lib/function";

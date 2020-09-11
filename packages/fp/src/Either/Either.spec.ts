@@ -1,4 +1,4 @@
-import { Either } from ".";
+import { Either } from "../index";
 
 describe("Either", () => {
   const throwError = (): never => {

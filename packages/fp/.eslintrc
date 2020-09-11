@@ -1,5 +1,8 @@
 {
   "root": true,
-  "extends": ["../../.eslintrc", "plugin:react/recommended"],
-  "parserOptions": { "project": "./tsconfig.json" }
+  "extends": ["../../.eslintrc"],
+  "parserOptions": { "project": "./tsconfig.json" },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
 }
