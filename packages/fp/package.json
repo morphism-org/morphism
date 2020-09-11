@@ -15,10 +15,10 @@
   ],
   "scripts": {
     "test": "jest",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "yarn test --watch",
     "build": "tsc --project tsconfig.lib.json",
     "codegen": "ts-node ./namespace-codegen.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "fp-ts": "^2.6.2",
