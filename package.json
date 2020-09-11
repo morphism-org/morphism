@@ -2,8 +2,8 @@
   "private": true,
   "name": "morphism",
   "scripts": {
-    "data": "lerna exec --scope @morphism/data --",
-    "data:build": "npm run fp -- npm run build",
+    "data": "yarn workspace @morphism/data",
+    "data:build": "yarn data build",
     "fp": "yarn workspace @morphism/fp",
     "fp:test": "yarn fp jest",
     "fp:test:watch": "yarn fp:test --watch",
