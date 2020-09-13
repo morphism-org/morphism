@@ -2,8 +2,8 @@
   "name": "@morphism/data",
   "description": "Basic data types and utilities",
   "license": "MIT",
-  "version": "0.0.1-alpha.12+b656a4e",
-  "gitHead": "b656a4efc96c4265f1e391c809ca4b79dacb242a",
+  "version": "0.0.1-alpha.46+e3da3e5",
+  "gitHead": "e3da3e582889fdf7db63c21e780389f24dec1483",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
@@ -24,19 +24,19 @@
     "uuid": "^8.1.0"
   },
   "devDependencies": {
-    "typescript": "^3.9.3",
-    "jest": "^26.0.1",
-    "ts-jest": "^26.0.0",
+    "@morphism/fp": "0.0.1-alpha.9+e32f25d",
     "@types/jest": "^25.2.3",
-    "prettier": "^2.0.5",
-    "eslint": "^7.1.0",
+    "@types/uuid": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-functional": "^3.0.1",
-    "@types/uuid": "^8.0.0",
-    "@morphism/fp": "0.0.1-alpha.9+e32f25d",
     "fp-ts": "^2.6.2",
-    "io-ts": "^2.2.4"
+    "io-ts": "^2.2.4",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
   }
 }

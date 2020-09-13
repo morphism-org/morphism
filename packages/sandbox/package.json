@@ -2,7 +2,7 @@
   "name": "@morphism/sandbox",
   "description": "The sandbox",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.46+e3da3e5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
@@ -44,5 +44,6 @@
   },
   "dependencies": {
     "graphql": "^15.0.0"
-  }
+  },
+  "gitHead": "e3da3e582889fdf7db63c21e780389f24dec1483"
 }

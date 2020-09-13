@@ -2,8 +2,8 @@
   "name": "@morphism/fp",
   "description": "@morphism/fp",
   "license": "MIT",
-  "version": "0.0.1-alpha.rc.2.2",
-  "gitHead": "b656a4efc96c4265f1e391c809ca4b79dacb242a",
+  "version": "0.0.1-alpha.46+e3da3e5",
+  "gitHead": "e3da3e582889fdf7db63c21e780389f24dec1483",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"

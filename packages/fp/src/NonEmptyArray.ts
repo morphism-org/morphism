@@ -1,6 +1,6 @@
 import { Option } from ".";
 
-import * as BaseNonEmptyArray from "fp-ts/lib/NonEmptyArray";
+import * as _NonEmptyArray from "fp-ts/lib/NonEmptyArray";
 
 // eslint-disable-next-line functional/prefer-readonly-type
 export type NonEmptyArray<A> = Array<A> & {
@@ -10,71 +10,71 @@ export type NonEmptyArray<A> = Array<A> & {
 export namespace NonEmptyArray {
   export const fromReadonlyArray = <A>(
     as: readonly A[]
-  ): Option<BaseNonEmptyArray.NonEmptyArray<A>> =>
+  ): Option<NonEmptyArray<A>> =>
     // eslint-disable-next-line functional/prefer-readonly-type
-    BaseNonEmptyArray.fromArray(as as A[]);
+    _NonEmptyArray.fromArray(as as A[]);
 
-  export import cons = BaseNonEmptyArray.cons;
-  export import snoc = BaseNonEmptyArray.snoc;
-  export import fromArray = BaseNonEmptyArray.fromArray;
-  export import getShow = BaseNonEmptyArray.getShow;
-  export import head = BaseNonEmptyArray.head;
-  export import tail = BaseNonEmptyArray.tail;
-  export import reverse = BaseNonEmptyArray.reverse;
-  export import min = BaseNonEmptyArray.min;
-  export import max = BaseNonEmptyArray.max;
-  export import getSemigroup = BaseNonEmptyArray.getSemigroup;
-  export import getEq = BaseNonEmptyArray.getEq;
-  export import group = BaseNonEmptyArray.group;
-  export import groupSort = BaseNonEmptyArray.groupSort;
-  export import groupBy = BaseNonEmptyArray.groupBy;
-  export import last = BaseNonEmptyArray.last;
-  export import init = BaseNonEmptyArray.init;
-  export import sort = BaseNonEmptyArray.sort;
-  export import insertAt = BaseNonEmptyArray.insertAt;
-  export import updateAt = BaseNonEmptyArray.updateAt;
-  export import modifyAt = BaseNonEmptyArray.modifyAt;
-  export import copy = BaseNonEmptyArray.copy;
-  export import filter = BaseNonEmptyArray.filter;
-  export import filterWithIndex = BaseNonEmptyArray.filterWithIndex;
-  export import of = BaseNonEmptyArray.of;
-  export import concat = BaseNonEmptyArray.concat;
-  export import fold = BaseNonEmptyArray.fold;
-  export import zipWith = BaseNonEmptyArray.zipWith;
-  export import zip = BaseNonEmptyArray.zip;
-  export import unzip = BaseNonEmptyArray.unzip;
-  export import foldMapWithIndex = BaseNonEmptyArray.foldMapWithIndex;
-  export import foldMap = BaseNonEmptyArray.foldMap;
-  export import alt = BaseNonEmptyArray.alt;
-  export import ap = BaseNonEmptyArray.ap;
-  export import apFirst = BaseNonEmptyArray.apFirst;
-  export import apSecond = BaseNonEmptyArray.apSecond;
-  export import chain = BaseNonEmptyArray.chain;
-  export import chainFirst = BaseNonEmptyArray.chainFirst;
-  export import duplicate = BaseNonEmptyArray.duplicate;
-  export import extend = BaseNonEmptyArray.extend;
-  export import flatten = BaseNonEmptyArray.flatten;
-  export import map = BaseNonEmptyArray.map;
-  export import mapWithIndex = BaseNonEmptyArray.mapWithIndex;
-  export import reduce = BaseNonEmptyArray.reduce;
-  export import reduceWithIndex = BaseNonEmptyArray.reduceWithIndex;
-  export import reduceRight = BaseNonEmptyArray.reduceRight;
-  export import reduceRightWithIndex = BaseNonEmptyArray.reduceRightWithIndex;
-  export import traverse = BaseNonEmptyArray.traverse;
-  export import sequence = BaseNonEmptyArray.sequence;
-  export import traverseWithIndex = BaseNonEmptyArray.traverseWithIndex;
-  export import extract = BaseNonEmptyArray.extract;
-  export import Functor = BaseNonEmptyArray.Functor;
-  export import FunctorWithIndex = BaseNonEmptyArray.FunctorWithIndex;
-  export import Applicative = BaseNonEmptyArray.Applicative;
-  export import Monad = BaseNonEmptyArray.Monad;
-  export import Foldable = BaseNonEmptyArray.Foldable;
-  export import FoldableWithIndex = BaseNonEmptyArray.FoldableWithIndex;
-  export import Traversable = BaseNonEmptyArray.Traversable;
-  export import TraversableWithIndex = BaseNonEmptyArray.TraversableWithIndex;
-  export import Alt = BaseNonEmptyArray.Alt;
-  export import Comonad = BaseNonEmptyArray.Comonad;
-  export import nonEmptyArray = BaseNonEmptyArray.nonEmptyArray;
-  export import bindTo = BaseNonEmptyArray.bindTo;
-  export import bind = BaseNonEmptyArray.bind;
+  export import cons = _NonEmptyArray.cons;
+  export import snoc = _NonEmptyArray.snoc;
+  export import fromArray = _NonEmptyArray.fromArray;
+  export import getShow = _NonEmptyArray.getShow;
+  export import head = _NonEmptyArray.head;
+  export import tail = _NonEmptyArray.tail;
+  export import reverse = _NonEmptyArray.reverse;
+  export import min = _NonEmptyArray.min;
+  export import max = _NonEmptyArray.max;
+  export import getSemigroup = _NonEmptyArray.getSemigroup;
+  export import getEq = _NonEmptyArray.getEq;
+  export import group = _NonEmptyArray.group;
+  export import groupSort = _NonEmptyArray.groupSort;
+  export import groupBy = _NonEmptyArray.groupBy;
+  export import last = _NonEmptyArray.last;
+  export import init = _NonEmptyArray.init;
+  export import sort = _NonEmptyArray.sort;
+  export import insertAt = _NonEmptyArray.insertAt;
+  export import updateAt = _NonEmptyArray.updateAt;
+  export import modifyAt = _NonEmptyArray.modifyAt;
+  export import copy = _NonEmptyArray.copy;
+  export import filter = _NonEmptyArray.filter;
+  export import filterWithIndex = _NonEmptyArray.filterWithIndex;
+  export import of = _NonEmptyArray.of;
+  export import concat = _NonEmptyArray.concat;
+  export import fold = _NonEmptyArray.fold;
+  export import zipWith = _NonEmptyArray.zipWith;
+  export import zip = _NonEmptyArray.zip;
+  export import unzip = _NonEmptyArray.unzip;
+  export import foldMapWithIndex = _NonEmptyArray.foldMapWithIndex;
+  export import foldMap = _NonEmptyArray.foldMap;
+  export import alt = _NonEmptyArray.alt;
+  export import ap = _NonEmptyArray.ap;
+  export import apFirst = _NonEmptyArray.apFirst;
+  export import apSecond = _NonEmptyArray.apSecond;
+  export import chain = _NonEmptyArray.chain;
+  export import chainFirst = _NonEmptyArray.chainFirst;
+  export import duplicate = _NonEmptyArray.duplicate;
+  export import extend = _NonEmptyArray.extend;
+  export import flatten = _NonEmptyArray.flatten;
+  export import map = _NonEmptyArray.map;
+  export import mapWithIndex = _NonEmptyArray.mapWithIndex;
+  export import reduce = _NonEmptyArray.reduce;
+  export import reduceWithIndex = _NonEmptyArray.reduceWithIndex;
+  export import reduceRight = _NonEmptyArray.reduceRight;
+  export import reduceRightWithIndex = _NonEmptyArray.reduceRightWithIndex;
+  export import traverse = _NonEmptyArray.traverse;
+  export import sequence = _NonEmptyArray.sequence;
+  export import traverseWithIndex = _NonEmptyArray.traverseWithIndex;
+  export import extract = _NonEmptyArray.extract;
+  export import Functor = _NonEmptyArray.Functor;
+  export import FunctorWithIndex = _NonEmptyArray.FunctorWithIndex;
+  export import Applicative = _NonEmptyArray.Applicative;
+  export import Monad = _NonEmptyArray.Monad;
+  export import Foldable = _NonEmptyArray.Foldable;
+  export import FoldableWithIndex = _NonEmptyArray.FoldableWithIndex;
+  export import Traversable = _NonEmptyArray.Traversable;
+  export import TraversableWithIndex = _NonEmptyArray.TraversableWithIndex;
+  export import Alt = _NonEmptyArray.Alt;
+  export import Comonad = _NonEmptyArray.Comonad;
+  export import nonEmptyArray = _NonEmptyArray.nonEmptyArray;
+  export import bindTo = _NonEmptyArray.bindTo;
+  export import bind = _NonEmptyArray.bind;
 }
