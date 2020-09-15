@@ -3,8 +3,6 @@
   "name": "morphism",
   "scripts": {
     "publish:canary": "lerna publish --canary",
-    "data": "yarn workspace @morphism/data",
-    "data:build": "yarn data build",
     "fp": "yarn workspace @morphism/fp",
     "fp:test": "yarn fp jest",
     "fp:test:watch": "yarn fp:test --watch",
@@ -14,6 +12,7 @@
     "lerna": " ^3.22.0",
     "ts-node": "^8.10.2"
   },
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ]
