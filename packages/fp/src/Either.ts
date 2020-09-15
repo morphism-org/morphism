@@ -2,17 +2,22 @@ import * as _Either from "fp-ts/Either";
 import { Exception, Fn } from "./index";
 import { Do as doNotationFrom } from "fp-ts-contrib/lib/Do";
 
-export type Either<E, A> = _Either.Left<E> | _Either.Right<A>;
+export type Either<E, A> = Either.Left<E> | Either.Right<A>;
 
 export namespace Either {
+  export type Left<E> = _Either.Left<E>;
+  export type Right<A> = _Either.Right<A>;
   export type ErrorOr<A> = Either<Error, A>;
   export type ErrorsOr<A> = Either<readonly Error[], A>;
 
+  /** Approximates Haskell's do-notation - https://paulgray.net/do-syntax-in-typescript/ */
   export const Do = () => doNotationFrom(either);
 
+  /** Returns a `Either.tryCatch` call w/ a general-purpose error handler */
   export const fromUnsafe = <A>(fn: Fn.Lazy<A>): Either<Error, A> =>
     tryCatch(fn, Exception.fromUnknown);
 
+  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import isLeft = _Either.isLeft;
   export import isRight = _Either.isRight;
   export import left = _Either.left;
@@ -81,4 +86,5 @@ export namespace Either {
   export import bindW = _Either.bindW;
   export import bind = _Either.bind;
   export import apSW = _Either.apSW;
+  /* CODEGEN :: FP-TS RE-EXPORTS */
 }

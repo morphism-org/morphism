@@ -12,6 +12,7 @@ export namespace These {
   ): Option<These<A, B>> =>
     These.fromOptions(Option.fromNullable(a), Option.fromNullable(b));
 
+  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _These.left;
   export import right = _These.right;
   export import both = _These.both;
@@ -45,4 +46,5 @@ export namespace These {
   export import Bifunctor = _These.Bifunctor;
   export import Foldable = _These.Foldable;
   export import Traversable = _These.Traversable;
+  /* CODEGEN :: FP-TS RE-EXPORTS */
 }

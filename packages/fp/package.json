@@ -17,7 +17,7 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "build": "tsc --project tsconfig.lib.json",
-    "codegen": "ts-node ./namespace-codegen.ts",
+    "codegen": "ts-node ./namespace-codegen.ts Option Either TaskEither NonEmptyArray These",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {

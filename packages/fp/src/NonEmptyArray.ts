@@ -14,6 +14,7 @@ export namespace NonEmptyArray {
     // eslint-disable-next-line functional/prefer-readonly-type
     _NonEmptyArray.fromArray(as as A[]);
 
+  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import cons = _NonEmptyArray.cons;
   export import snoc = _NonEmptyArray.snoc;
   export import fromArray = _NonEmptyArray.fromArray;
@@ -77,4 +78,5 @@ export namespace NonEmptyArray {
   export import nonEmptyArray = _NonEmptyArray.nonEmptyArray;
   export import bindTo = _NonEmptyArray.bindTo;
   export import bind = _NonEmptyArray.bind;
+  /* CODEGEN :: FP-TS RE-EXPORTS */
 }
