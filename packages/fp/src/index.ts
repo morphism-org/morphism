@@ -4,6 +4,7 @@ export * as JSON from "./JSON";
 export { NonEmptyArray } from "./NonEmptyArray";
 export { Option } from "./Option";
 export * as Runtime from "./Runtime";
+export { Task } from "./Task";
 export { TaskEither } from "./TaskEither";
 export { These } from "./These";
 
@@ -93,7 +94,6 @@ export {
   stateT as StateT,
   store as Store,
   strong as Strong,
-  task as Task,
   taskThese as TaskThese,
   theseT as TheseT,
   traced as Traced,
