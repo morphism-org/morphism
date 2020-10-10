@@ -6,12 +6,13 @@ import { pipe } from "fp-ts/pipeable";
 import { exec } from "child_process";
 
 namespace Arguments {
-  export const validate = () => {
-    if (!process.argv.slice(2).length)
-      throw new Error("Invalid usage - yarn fp codegen <module-name>...");
-  };
-
-  export const getModuleNames = (): string[] => process.argv.slice(2);
+  export const determineModuleNames = (): string[] =>
+    process.argv.slice(2).length
+      ? process.argv.slice(2)
+      : FileSystem.readdirSync("./src")
+          .filter((fileName) => !fileName.includes("spec"))
+          .filter((fileName) => !fileToIgnore.includes(fileName))
+          .map((fileName) => fileName.substring(0, fileName.lastIndexOf(".")));
 }
 
 namespace File {
@@ -51,8 +52,8 @@ namespace File {
   };
 }
 
-namespace Functions {
-  export const buildExportStatements = (moduleName: string, lines: string[]) =>
+namespace ExportStatements {
+  export const buildAll = (moduleName: string, lines: string[]) =>
     pipe(
       findAllFunctions(lines).reduce((mapping, statement) => {
         const functionName = parseFunctionName(statement);
@@ -116,12 +117,12 @@ namespace Functions {
   };
 }
 
+const fileToIgnore = ["index.ts", "JSON.ts", "Exception.ts", "Runtime.ts"];
+
 const CODEGEN_COMMENT = "/* CODEGEN :: FP-TS RE-EXPORTS */";
 
-Arguments.validate();
-
-Arguments.getModuleNames().forEach((moduleName) => {
-  const exportStatements = Functions.buildExportStatements(
+Arguments.determineModuleNames().forEach((moduleName) => {
+  const exportStatements = ExportStatements.buildAll(
     moduleName,
     File.readFPTSFile(moduleName)
   );
