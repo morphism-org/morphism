@@ -13,6 +13,7 @@ describe("Runtime", () => {
       );
 
       const rightsWithMaybes: ReadonlyArray<Option.Nullable<unknown>> = [
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         ...rights,
         null,
         undefined,

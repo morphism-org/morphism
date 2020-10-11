@@ -22,4 +22,5 @@ export namespace Stringify {
 }
 
 const onError = (error: unknown): Error =>
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   Error(`Unrepresentable JSON value...\n\n${error}`);

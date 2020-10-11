@@ -4,9 +4,18 @@ export * as JSON from "./JSON";
 export { NonEmptyArray } from "./NonEmptyArray";
 export { Option } from "./Option";
 export * as Runtime from "./Runtime";
+export { These } from "./These";
 export { Task } from "./Task";
 export { TaskEither } from "./TaskEither";
-export { These } from "./These";
+export { TaskThese } from "./TaskThese";
+export { IO } from "./IO";
+export { IOEither } from "./IOEither";
+export { Ordering } from "./Ordering";
+export { Reader } from "./Reader";
+export { ReaderEither } from "./ReaderEither";
+export { ReaderTask } from "./ReaderTask";
+export { ReaderTaskEither } from "./ReaderTaskEither";
+export { Writer } from "./Writer";
 
 export { pipe } from "fp-ts/lib/pipeable";
 export { flow } from "fp-ts/lib/function";
@@ -52,8 +61,6 @@ export {
   hkt as HKT,
   identity as Identity,
   invariant as Invariant,
-  io as IO,
-  ioEither as IOEither,
   ioRef as IORef,
   joinSemilattice as JoinSemilattice,
   lattice as Lattice,
@@ -67,15 +74,10 @@ export {
   monoid as Monoid,
   optionT as OptionT,
   ord as Ord,
-  ordering as Ordering,
   pipeable,
   profunctor as Profunctor,
   random as Random,
-  reader as Reader,
-  readerEither as ReaderEither,
   readerT as ReaderT,
-  readerTask as ReaderTask,
-  readerTaskEither as ReaderTaskEither,
   readonlyArray as ReadonlyArray,
   readonlyMap as ReadonlyMap,
   readonlyNonEmptyArray as ReadonlyNonEmptyArray,
@@ -94,7 +96,6 @@ export {
   stateT as StateT,
   store as Store,
   strong as Strong,
-  taskThese as TaskThese,
   theseT as TheseT,
   traced as Traced,
   traversable as Traversable,
@@ -104,13 +105,14 @@ export {
   unfoldable as Unfoldable,
   validationT as ValidationT,
   witherable as Witherable,
-  writer as Writer,
   writerT as WriterT,
 } from "fp-ts";
 
 export declare const hole: <A>() => A;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const console: any;
+
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 export const spy = <A>(a: A): A => void console.log(a) ?? a;
 

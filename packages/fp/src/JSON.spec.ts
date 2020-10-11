@@ -76,7 +76,7 @@ describe("JSON", () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const circular: any = {};
 
-      // eslint-disable-next-line functional/no-expression-statement,functional/immutable-data
+      // eslint-disable-next-line functional/no-expression-statement,functional/immutable-data,@typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
       circular.circular = circular;
 
       test.each`
