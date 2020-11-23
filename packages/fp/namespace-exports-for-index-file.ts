@@ -1,0 +1,64 @@
+const input = `Apply.d.ts
+BooleanAlgebra.d.ts
+Bounded.d.ts
+BoundedDistributiveLattice.d.ts
+ChainRec.d.ts
+Choice.d.ts
+Compactable.d.ts
+Const.d.ts
+DistributiveLattice.d.ts
+Either.d.ts
+EitherT.d.ts
+Eq.d.ts
+Field.d.ts
+Filterable.d.ts
+Foldable.d.ts
+FoldableWithIndex.d.ts
+Functor.d.ts
+FunctorWithIndex.d.ts
+IO.d.ts
+IOEither.d.ts
+Identity.d.ts
+Monoid.d.ts
+NonEmptyArray.d.ts
+Option.d.ts
+OptionT.d.ts
+Ord.d.ts
+Ordering.d.ts
+Reader.d.ts
+ReaderEither.d.ts
+ReaderT.d.ts
+ReaderTask.d.ts
+ReaderTaskEither.d.ts
+ReadonlyNonEmptyArray.d.ts
+ReadonlyRecord.d.ts
+Ring.d.ts
+Semigroup.d.ts
+Semiring.d.ts
+Show.d.ts
+State.d.ts
+StateReaderTaskEither.d.ts
+StateT.d.ts
+Store.d.ts
+Strong.d.ts
+Task.d.ts
+TaskEither.d.ts
+TaskThese.d.ts
+These.d.ts
+TheseT.d.ts
+Traced.d.ts
+Traversable.d.ts
+Tree.d.ts
+ValidationT.d.ts
+Writer.d.ts
+WriterT.d.ts
+`;
+
+console.log(
+  input
+    .trim()
+    .split("\n")
+    .map((x) => x.substring(0, x.indexOf(".")))
+    .map((x) => `export { ${x} } from "./${x}";`)
+    .join("\n")
+);

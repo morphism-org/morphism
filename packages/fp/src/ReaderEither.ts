@@ -1,11 +1,8 @@
 import * as _ReaderEither from "fp-ts/lib/ReaderEither";
-import { Either } from "fp-ts/lib/Either";
-import { Reader } from "fp-ts/Reader";
 
-export type ReaderEither<R, E, A> = Reader<R, Either<E, A>>;
+export type ReaderEither<R, E, A> = _ReaderEither.ReaderEither<R, E, A>;
 
 export namespace ReaderEither {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _ReaderEither.left;
   export import right = _ReaderEither.right;
   export import rightReader = _ReaderEither.rightReader;
@@ -56,5 +53,5 @@ export namespace ReaderEither {
   export import bindW = _ReaderEither.bindW;
   export import bind = _ReaderEither.bind;
   export import apSW = _ReaderEither.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _ReaderEither.apS;
 }

@@ -1,9 +1,8 @@
 import * as _Writer from "fp-ts/lib/Writer";
 
-export type Writer<W, A> = () => readonly [A, W];
+export type Writer<W, A> = _Writer.Writer<W, A>;
 
 export namespace Writer {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import tell = _Writer.tell;
   export import listen = _Writer.listen;
   export import pass = _Writer.pass;
@@ -16,5 +15,5 @@ export namespace Writer {
   export import evalWriter = _Writer.evalWriter;
   export import execWriter = _Writer.execWriter;
   export import evaluate = _Writer.evaluate;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import execute = _Writer.execute;
 }

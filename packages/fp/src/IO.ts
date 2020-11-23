@@ -1,14 +1,8 @@
 import * as _IO from "fp-ts/lib/IO";
 
-/**
- * `IO<A>` represents a non-deterministic synchronous computation that can cause side effects, yields
- * a value of type `A` and **never fails**. If you want to represent a synchronous computation that
- * may fail, please see `IOEither`.
- */
 export type IO<A> = () => A;
 
 export namespace IO {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import map = _IO.map;
   export import ap = _IO.ap;
   export import apFirst = _IO.apFirst;
@@ -28,5 +22,5 @@ export namespace IO {
   export import io = _IO.io;
   export import bindTo = _IO.bindTo;
   export import bind = _IO.bind;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _IO.apS;
 }

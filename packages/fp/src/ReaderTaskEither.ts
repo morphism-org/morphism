@@ -1,10 +1,12 @@
 import * as _ReaderTaskEither from "fp-ts/lib/ReaderTaskEither";
-import { TaskEither } from "fp-ts/lib/TaskEither";
 
-export type ReaderTaskEither<R, E, A> = (r: R) => TaskEither<E, A>;
+export type ReaderTaskEither<R, E, A> = _ReaderTaskEither.ReaderTaskEither<
+  R,
+  E,
+  A
+>;
 
 export namespace ReaderTaskEither {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import fromTaskEither = _ReaderTaskEither.fromTaskEither;
   export import left = _ReaderTaskEither.left;
   export import right = _ReaderTaskEither.right;
@@ -74,5 +76,5 @@ export namespace ReaderTaskEither {
   export import bindW = _ReaderTaskEither.bindW;
   export import bind = _ReaderTaskEither.bind;
   export import apSW = _ReaderTaskEither.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _ReaderTaskEither.apS;
 }

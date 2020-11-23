@@ -1,13 +1,13 @@
 import { Either, identity, pipe } from ".";
 
-export const parse = (string: string): Either.ErrorOr<unknown> =>
+export const parse = (string: string): Either<Error, unknown> =>
   Either.parseJSON(string, onError);
 
 export namespace Stringify {
-  export const short = (json: unknown): Either.ErrorOr<string> =>
+  export const short = (json: unknown): Either<Error, string> =>
     Either.tryCatch(() => JSON.stringify(json), onError);
 
-  export const pretty = (json: unknown): Either.ErrorOr<string> =>
+  export const pretty = (json: unknown): Either<Error, string> =>
     Either.tryCatch(() => JSON.stringify(json, undefined, 2), onError);
 
   export namespace Always {

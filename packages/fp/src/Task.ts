@@ -3,7 +3,6 @@ import * as _Task from "fp-ts/lib/Task";
 export type Task<A> = () => Promise<A>;
 
 export namespace Task {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import fromIO = _Task.fromIO;
   export import delay = _Task.delay;
   export import fromIOK = _Task.fromIOK;
@@ -27,5 +26,5 @@ export namespace Task {
   export import never = _Task.never;
   export import bindTo = _Task.bindTo;
   export import bind = _Task.bind;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _Task.apS;
 }

@@ -1,0 +1,72 @@
+import * as _ReadonlyNonEmptyArray from "fp-ts/lib/ReadonlyNonEmptyArray";
+
+export type ReadonlyNonEmptyArray<
+  A
+> = _ReadonlyNonEmptyArray.ReadonlyNonEmptyArray<A>;
+
+export namespace ReadonlyNonEmptyArray {
+  export import cons = _ReadonlyNonEmptyArray.cons;
+  export import snoc = _ReadonlyNonEmptyArray.snoc;
+  export import fromReadonlyArray = _ReadonlyNonEmptyArray.fromReadonlyArray;
+  export import fromArray = _ReadonlyNonEmptyArray.fromArray;
+  export import getShow = _ReadonlyNonEmptyArray.getShow;
+  export import head = _ReadonlyNonEmptyArray.head;
+  export import tail = _ReadonlyNonEmptyArray.tail;
+  export import reverse = _ReadonlyNonEmptyArray.reverse;
+  export import min = _ReadonlyNonEmptyArray.min;
+  export import max = _ReadonlyNonEmptyArray.max;
+  export import getSemigroup = _ReadonlyNonEmptyArray.getSemigroup;
+  export import getEq = _ReadonlyNonEmptyArray.getEq;
+  export import group = _ReadonlyNonEmptyArray.group;
+  export import groupSort = _ReadonlyNonEmptyArray.groupSort;
+  export import groupBy = _ReadonlyNonEmptyArray.groupBy;
+  export import last = _ReadonlyNonEmptyArray.last;
+  export import init = _ReadonlyNonEmptyArray.init;
+  export import sort = _ReadonlyNonEmptyArray.sort;
+  export import insertAt = _ReadonlyNonEmptyArray.insertAt;
+  export import updateAt = _ReadonlyNonEmptyArray.updateAt;
+  export import modifyAt = _ReadonlyNonEmptyArray.modifyAt;
+  export import filter = _ReadonlyNonEmptyArray.filter;
+  export import filterWithIndex = _ReadonlyNonEmptyArray.filterWithIndex;
+  export import of = _ReadonlyNonEmptyArray.of;
+  export import concat = _ReadonlyNonEmptyArray.concat;
+  export import fold = _ReadonlyNonEmptyArray.fold;
+  export import zipWith = _ReadonlyNonEmptyArray.zipWith;
+  export import zip = _ReadonlyNonEmptyArray.zip;
+  export import unzip = _ReadonlyNonEmptyArray.unzip;
+  export import foldMapWithIndex = _ReadonlyNonEmptyArray.foldMapWithIndex;
+  export import foldMap = _ReadonlyNonEmptyArray.foldMap;
+  export import alt = _ReadonlyNonEmptyArray.alt;
+  export import ap = _ReadonlyNonEmptyArray.ap;
+  export import apFirst = _ReadonlyNonEmptyArray.apFirst;
+  export import apSecond = _ReadonlyNonEmptyArray.apSecond;
+  export import chain = _ReadonlyNonEmptyArray.chain;
+  export import chainFirst = _ReadonlyNonEmptyArray.chainFirst;
+  export import duplicate = _ReadonlyNonEmptyArray.duplicate;
+  export import extend = _ReadonlyNonEmptyArray.extend;
+  export import flatten = _ReadonlyNonEmptyArray.flatten;
+  export import map = _ReadonlyNonEmptyArray.map;
+  export import mapWithIndex = _ReadonlyNonEmptyArray.mapWithIndex;
+  export import reduce = _ReadonlyNonEmptyArray.reduce;
+  export import reduceWithIndex = _ReadonlyNonEmptyArray.reduceWithIndex;
+  export import reduceRight = _ReadonlyNonEmptyArray.reduceRight;
+  export import reduceRightWithIndex = _ReadonlyNonEmptyArray.reduceRightWithIndex;
+  export import traverse = _ReadonlyNonEmptyArray.traverse;
+  export import sequence = _ReadonlyNonEmptyArray.sequence;
+  export import traverseWithIndex = _ReadonlyNonEmptyArray.traverseWithIndex;
+  export import extract = _ReadonlyNonEmptyArray.extract;
+  export import Functor = _ReadonlyNonEmptyArray.Functor;
+  export import FunctorWithIndex = _ReadonlyNonEmptyArray.FunctorWithIndex;
+  export import Applicative = _ReadonlyNonEmptyArray.Applicative;
+  export import Monad = _ReadonlyNonEmptyArray.Monad;
+  export import Foldable = _ReadonlyNonEmptyArray.Foldable;
+  export import FoldableWithIndex = _ReadonlyNonEmptyArray.FoldableWithIndex;
+  export import Traversable = _ReadonlyNonEmptyArray.Traversable;
+  export import TraversableWithIndex = _ReadonlyNonEmptyArray.TraversableWithIndex;
+  export import Alt = _ReadonlyNonEmptyArray.Alt;
+  export import Comonad = _ReadonlyNonEmptyArray.Comonad;
+  export import readonlyNonEmptyArray = _ReadonlyNonEmptyArray.readonlyNonEmptyArray;
+  export import bindTo = _ReadonlyNonEmptyArray.bindTo;
+  export import bind = _ReadonlyNonEmptyArray.bind;
+  export import apS = _ReadonlyNonEmptyArray.apS;
+}

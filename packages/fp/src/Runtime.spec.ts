@@ -1,4 +1,4 @@
-import { ReadonlyArray, Option, Runtime } from ".";
+import { ReadonlyArray, Runtime } from ".";
 
 describe("Runtime", () => {
   describe("nullable", () => {
@@ -12,7 +12,7 @@ describe("Runtime", () => {
         Runtime.decode(Runtime.nullable(a))
       );
 
-      const rightsWithMaybes: ReadonlyArray<Option.Nullable<unknown>> = [
+      const rightsWithMaybes: ReadonlyArray<unknown | null | undefined> = [
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         ...rights,
         null,

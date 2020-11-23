@@ -90,7 +90,7 @@ export const nullable = <Definition extends Runtime.Any>(
 
 export const decode = <A extends ToType<Runtime>, Runtime extends Runtime.Any>(
   runtime: Runtime
-) => (value?: Option.Nullable<unknown>): Either.ErrorOr<A> =>
+) => (value?: unknown | null | undefined): Either<Error, A> =>
   pipe(
     runtime.decode(value),
     Either.mapLeft(

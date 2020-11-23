@@ -1,16 +1,8 @@
 import * as _IOEither from "fp-ts/lib/IOEither";
-import { Either } from "fp-ts/lib/Either";
-import { IO } from "fp-ts/lib/IO";
 
-/**
- * `IOEither<E, A>` represents a synchronous computation that either yields a value of type `A`
- * or fails yielding an error of type `E`. If you want to represent a synchronous computation
- * that never fails, please see `IO`.
- */
-export type IOEither<E, A> = IO<Either<E, A>>;
+export type IOEither<E, A> = _IOEither.IOEither<E, A>;
 
 export namespace IOEither {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _IOEither.left;
   export import right = _IOEither.right;
   export import rightIO = _IOEither.rightIO;
@@ -63,5 +55,5 @@ export namespace IOEither {
   export import bindW = _IOEither.bindW;
   export import bind = _IOEither.bind;
   export import apSW = _IOEither.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _IOEither.apS;
 }

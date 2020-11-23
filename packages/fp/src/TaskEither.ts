@@ -1,22 +1,8 @@
-import { Either, Exception, Fn } from ".";
-import { Task } from "fp-ts/lib/Task";
-
 import * as _TaskEither from "fp-ts/lib/TaskEither";
-import { Do as doNotationFrom } from "fp-ts-contrib/lib/Do";
 
-export type TaskEither<E, A> = Task<Either<E, A>>;
+export type TaskEither<E, A> = _TaskEither.TaskEither<E, A>;
 
 export namespace TaskEither {
-  export type ErrorOr<A> = TaskEither<Error, A>;
-  export type ErrorOrs<A> = TaskEither<readonly Error[], A>;
-
-  /** Approximates Haskell's do-notation - https://paulgray.net/do-syntax-in-typescript/ */
-  export const Do = () => doNotationFrom(taskEither);
-
-  export const fromUnsafe = <A>(fn: Fn.Lazy<Promise<A>>): ErrorOr<A> =>
-    tryCatch(fn, Exception.fromUnknown);
-
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _TaskEither.left;
   export import right = _TaskEither.right;
   export import rightTask = _TaskEither.rightTask;
@@ -77,5 +63,5 @@ export namespace TaskEither {
   export import bindW = _TaskEither.bindW;
   export import bind = _TaskEither.bind;
   export import apSW = _TaskEither.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _TaskEither.apS;
 }

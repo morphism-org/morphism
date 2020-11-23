@@ -1,18 +1,8 @@
-import { Option } from ".";
 import * as _These from "fp-ts/lib/These";
-import { Either } from "fp-ts/Either";
-import { Both } from "fp-ts/These";
 
-export declare type These<E, A> = Either<E, A> | Both<E, A>;
+export type These<E, A> = _These.These<E, A>;
 
 export namespace These {
-  export const fromNullables = <A, B>(
-    a?: Option.Nullable<A>,
-    b?: Option.Nullable<B>
-  ): Option<These<A, B>> =>
-    These.fromOptions(Option.fromNullable(a), Option.fromNullable(b));
-
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _These.left;
   export import right = _These.right;
   export import both = _These.both;
@@ -46,5 +36,5 @@ export namespace These {
   export import Bifunctor = _These.Bifunctor;
   export import Foldable = _These.Foldable;
   export import Traversable = _These.Traversable;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import these = _These.these;
 }

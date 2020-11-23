@@ -1,21 +1,60 @@
-export { Either } from "./Either";
 export * as Exception from "./Exception";
 export * as JSON from "./JSON";
-export { NonEmptyArray } from "./NonEmptyArray";
-export { Option } from "./Option";
 export * as Runtime from "./Runtime";
-export { These } from "./These";
-export { Task } from "./Task";
-export { TaskEither } from "./TaskEither";
-export { TaskThese } from "./TaskThese";
+export { Apply } from "./Apply";
+export { BooleanAlgebra } from "./BooleanAlgebra";
+export { Bounded } from "./Bounded";
+export { BoundedDistributiveLattice } from "./BoundedDistributiveLattice";
+export { ChainRec } from "./ChainRec";
+export { Choice } from "./Choice";
+export { Compactable } from "./Compactable";
+export { Const } from "./Const";
+export { DistributiveLattice } from "./DistributiveLattice";
+export { Either } from "./Either";
+export { EitherT } from "./EitherT";
+export { Eq } from "./Eq";
+export { Field } from "./Field";
+export { Filterable } from "./Filterable";
+export { Foldable } from "./Foldable";
+export { FoldableWithIndex } from "./FoldableWithIndex";
+export { Functor } from "./Functor";
+export { FunctorWithIndex } from "./FunctorWithIndex";
 export { IO } from "./IO";
 export { IOEither } from "./IOEither";
+export { Identity } from "./Identity";
+export { Monoid } from "./Monoid";
+export { NonEmptyArray } from "./NonEmptyArray";
+export { Option } from "./Option";
+export { OptionT } from "./OptionT";
+export { Ord } from "./Ord";
 export { Ordering } from "./Ordering";
 export { Reader } from "./Reader";
 export { ReaderEither } from "./ReaderEither";
+export { ReaderT } from "./ReaderT";
 export { ReaderTask } from "./ReaderTask";
 export { ReaderTaskEither } from "./ReaderTaskEither";
+export { ReadonlyNonEmptyArray } from "./ReadonlyNonEmptyArray";
+export { ReadonlyRecord } from "./ReadonlyRecord";
+export { Ring } from "./Ring";
+export { Semigroup } from "./Semigroup";
+export { Semiring } from "./Semiring";
+export { Show } from "./Show";
+export { State } from "./State";
+export { StateReaderTaskEither } from "./StateReaderTaskEither";
+export { StateT } from "./StateT";
+export { Store } from "./Store";
+export { Strong } from "./Strong";
+export { Task } from "./Task";
+export { TaskEither } from "./TaskEither";
+export { TaskThese } from "./TaskThese";
+export { These } from "./These";
+export { TheseT } from "./TheseT";
+export { Traced } from "./Traced";
+export { Traversable } from "./Traversable";
+export { Tree } from "./Tree";
+export { ValidationT } from "./ValidationT";
 export { Writer } from "./Writer";
+export { WriterT } from "./WriterT";
 
 export { pipe } from "fp-ts/lib/pipeable";
 export { flow } from "fp-ts/lib/function";
@@ -24,42 +63,24 @@ export {
   alt as Alt,
   alternative as Alternative,
   applicative as Applicative,
-  apply as Apply,
   array as Array,
   bifunctor as Bifunctor,
   boolean as Boolean,
-  booleanAlgebra as BooleanAlgebra,
-  bounded as Bounded,
-  boundedDistributiveLattice as BoundedDistributiveLattice,
   boundedJoinSemilattice as BoundedJoinSemilattice,
   boundedLattice as BoundedLattice,
   boundedMeetSemilattice as BoundedMeetSemilattice,
   category as Category,
   chain as Chain,
-  chainRec as ChainRec,
-  choice as Choice,
   comonad as Comonad,
-  compactable as Compactable,
   console as Console,
-  const as Const,
   contravariant as Contravariant,
   date as Date,
-  distributiveLattice as DistributiveLattice,
-  eitherT as EitherT,
-  eq as Eq,
   extend as Extend,
-  field as Field,
-  filterable as Filterable,
   filterableWithIndex as FilterableWithIndex,
-  foldable as Foldable,
-  foldableWithIndex as FoldableWithIndex,
   function as Fn,
-  functor as Functor,
-  functorWithIndex as FunctorWithIndex,
   group as Group,
   heytingAlgebra as HeytingAlgebra,
   hkt as HKT,
-  identity as Identity,
   invariant as Invariant,
   ioRef as IORef,
   joinSemilattice as JoinSemilattice,
@@ -71,41 +92,20 @@ export {
   monadIO as MonadIO,
   monadTask as MonadTask,
   monadThrow as MonadThrow,
-  monoid as Monoid,
-  optionT as OptionT,
-  ord as Ord,
   pipeable,
   profunctor as Profunctor,
   random as Random,
-  readerT as ReaderT,
   readonlyArray as ReadonlyArray,
   readonlyMap as ReadonlyMap,
-  readonlyNonEmptyArray as ReadonlyNonEmptyArray,
-  readonlyRecord as ReadonlyRecord,
   readonlySet as ReadonlySet,
   readonlyTuple as ReadonlyTuple,
   record as Record,
-  ring as Ring,
-  semigroup as Semigroup,
   semigroupoid as Semigroupoid,
-  semiring as Semiring,
   set as Set,
-  show as Show,
-  state as State,
-  stateReaderTaskEither as StateReaderTaskEither,
-  stateT as StateT,
-  store as Store,
-  strong as Strong,
-  theseT as TheseT,
-  traced as Traced,
-  traversable as Traversable,
   traversableWithIndex as TraversableWithIndex,
-  tree as Tree,
   tuple as Tuple,
   unfoldable as Unfoldable,
-  validationT as ValidationT,
   witherable as Witherable,
-  writerT as WriterT,
 } from "fp-ts";
 
 export declare const hole: <A>() => A;

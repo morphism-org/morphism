@@ -1,9 +1,8 @@
 import * as _Reader from "fp-ts/lib/Reader";
 
-export type Reader<R, A> = (r: R) => A;
+export type Reader<R, A> = _Reader.Reader<R, A>;
 
 export namespace Reader {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import ask = _Reader.ask;
   export import asks = _Reader.asks;
   export import local = _Reader.local;
@@ -32,5 +31,5 @@ export namespace Reader {
   export import bindW = _Reader.bindW;
   export import bind = _Reader.bind;
   export import apSW = _Reader.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _Reader.apS;
 }

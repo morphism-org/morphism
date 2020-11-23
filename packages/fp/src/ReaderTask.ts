@@ -1,10 +1,8 @@
 import * as _ReaderTask from "fp-ts/lib/ReaderTask";
-import { Task } from "fp-ts/lib/Task";
 
-export type ReaderTask<R, A> = (r: R) => Task<A>;
+export type ReaderTask<R, A> = _ReaderTask.ReaderTask<R, A>;
 
 export namespace ReaderTask {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import fromTask = _ReaderTask.fromTask;
   export import fromReader = _ReaderTask.fromReader;
   export import fromIO = _ReaderTask.fromIO;
@@ -36,5 +34,5 @@ export namespace ReaderTask {
   export import bindW = _ReaderTask.bindW;
   export import bind = _ReaderTask.bind;
   export import apSW = _ReaderTask.apSW;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _ReaderTask.apS;
 }

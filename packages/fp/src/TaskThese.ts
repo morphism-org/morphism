@@ -1,11 +1,8 @@
-import { These } from "fp-ts/lib/These";
-import { Task } from "fp-ts/lib/Task";
 import * as _TaskThese from "fp-ts/lib/TaskThese";
 
-export type TaskThese<E, A> = Task<These<E, A>>;
+export type TaskThese<E, A> = _TaskThese.TaskThese<E, A>;
 
 export namespace TaskThese {
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import left = _TaskThese.left;
   export import right = _TaskThese.right;
   export import both = _TaskThese.both;
@@ -28,5 +25,5 @@ export namespace TaskThese {
   export import getMonad = _TaskThese.getMonad;
   export import functorTaskThese = _TaskThese.functorTaskThese;
   export import bifunctorTaskThese = _TaskThese.bifunctorTaskThese;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import taskThese = _TaskThese.taskThese;
 }

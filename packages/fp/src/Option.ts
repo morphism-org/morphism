@@ -1,19 +1,8 @@
-import * as _Option from "fp-ts/Option";
-import { Do as doNotationFrom } from "fp-ts-contrib/lib/Do";
+import * as _Option from "fp-ts/lib/Option";
 
-export * from "fp-ts/lib/Option";
-
-export type Option<A> = Option.None | Option.Some<A>;
+export type Option<A> = _Option.None | _Option.Some<A>;
 
 export namespace Option {
-  export type None = _Option.None;
-  export type Some<A> = _Option.Some<A>;
-  export type Nullable<A> = A | null | undefined;
-
-  /** Approximates Haskell's do-notation - https://paulgray.net/do-syntax-in-typescript/ */
-  export const Do = () => doNotationFrom(option);
-
-  /* CODEGEN :: FP-TS RE-EXPORTS */
   export import isSome = _Option.isSome;
   export import isNone = _Option.isNone;
   export import none = _Option.none;
@@ -82,5 +71,5 @@ export namespace Option {
   export import getRefinement = _Option.getRefinement;
   export import bindTo = _Option.bindTo;
   export import bind = _Option.bind;
-  /* CODEGEN :: FP-TS RE-EXPORTS */
+  export import apS = _Option.apS;
 }
