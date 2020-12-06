@@ -2,7 +2,7 @@
   "name": "@morphism/fp",
   "description": "@morphism/fp",
   "license": "MIT",
-  "version": "0.0.1-alpha.60+b1cc6a8",
+  "version": "0.1.0",
   "gitHead": "b1cc6a83f4c27eec3d1822760812c928818e4a78",
   "repository": {
     "type": "git",
