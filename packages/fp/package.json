@@ -14,10 +14,9 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
-    "test:watch": "npm run test -- --watch",
-    "build": "tsc --project tsconfig.lib.json",
-    "prepublishOnly": "npm run build"
+    "generate": "ts-node scripts/Generate.ts",
+    "build": "npm run generate && tsc --project tsconfig.lib.json",
+    "prepublishOnly": "npm run generate"
   },
   "peerDependencies": {
     "fp-ts": "^2.6.2",

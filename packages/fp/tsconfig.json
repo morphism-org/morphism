@@ -1,5 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["./src/**/*"],
-  "types": ["jest", "node"]
+  "include": ["./scripts/**/*"],
+  "types": ["node"]
 }

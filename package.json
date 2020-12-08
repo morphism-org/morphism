@@ -1,16 +1,11 @@
 {
   "private": true,
   "name": "morphism",
-  "scripts": {
-    "data": "lerna exec --scope @morphism/data --",
-    "data:build": "npm run fp -- npm run build",
-    "fp": "lerna exec --scope @morphism/fp --",
-    "fp:test": "npm run fp -- jest",
-    "fp:test:watch": "npm run fp:test -- --watch",
-    "fp:build": "npm run fp -- npm run build"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "lerna": " ^3.22.0",
-    "ts-node": "^8.10.2"
+    "yarn": "^1.22.10"
   }
 }
