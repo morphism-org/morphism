@@ -1,6 +1,9 @@
 {
   "private": true,
   "name": "morphism",
+  "scripts": {
+    "fp": "yarn workspace @morphism/fp"
+  },
   "workspaces": [
     "packages/*"
   ],
