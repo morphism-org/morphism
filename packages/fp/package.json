@@ -13,6 +13,9 @@
   "files": [
     "lib"
   ],
+  "resolutions": {
+    "lodash": ">=4.17.19"
+  },
   "scripts": {
     "generate": "ts-node scripts/Generate.ts",
     "build": "yarn generate && tsc --project tsconfig.lib.json",
