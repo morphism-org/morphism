@@ -6,7 +6,7 @@ import { pipe } from "fp-ts/lib/pipeable";
 import * as ReadonlyArray from "fp-ts/lib/ReadonlyArray";
 import * as Option from "fp-ts/lib/Option";
 
-const modulesPath = () => Path.join(__dirname, "../node_modules/fp-ts/lib");
+const modulesPath = () => Path.join(__dirname, "../../../node_modules/fp-ts/lib");
 const outputPath = () => Path.join(__dirname, "../src/Generated.ts");
 
 const shouldGenerate = (fileName: string): boolean =>
