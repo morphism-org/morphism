@@ -7,6 +7,7 @@ build*
 *generated*
 *secret*
 .idea
+*.iml
 
 *.log
 
