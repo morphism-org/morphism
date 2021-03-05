@@ -12,7 +12,7 @@ If we have an endpoint that accepts a payload of the following shape:
 ```typescript
 {
   username: string;
-  hoursWorked: number;
+  hoursWorked: string;
   isOvertime?: string;
   date: number
 }
@@ -45,7 +45,7 @@ namespace Request {
         Runtime.string(),
         () => 'Some special error message for just username'
       ),
-      hoursWorked: Runtime.number(),
+      hoursWorked: Runtime.numberFromString(),
       isOvertime: Runtime.withFallback(Runtime.booleanFromString(), false),
       dateRange: Runtime.dateFromUnixTime(),
     });
