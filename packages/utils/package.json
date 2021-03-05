@@ -17,8 +17,10 @@
     "lodash": ">=4.17.19"
   },
   "scripts": {
+    "generate": "ts-node scripts/Generate.ts",
+    "postgenerate": "prettier --write ./src/Generated.ts",
     "prebuild": "rm -rf ./lib",
-    "build": "tsc --project tsconfig.lib.json",
+    "build": "yarn generate && tsc --project tsconfig.lib.json",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
