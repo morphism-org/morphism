@@ -9,8 +9,8 @@ experience around `fp-ts` and associated libraries.
 ### @morphism/fp
 
 A faithful re-export of `fp-ts` that uses declaration merging to 
-allow access to both a type, _and_ all methods on that type,
-using only a single import statement.
+allow access to both a type _and_ all methods on that type,
+and with only a single import.
 
 For more information and examples, checkout that project's [readme](https://github.com/morphism-org/morphism/tree/master/packages/fp).
 
