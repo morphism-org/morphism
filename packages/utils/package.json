@@ -2,8 +2,8 @@
   "name": "@morphism/utils",
   "description": "@morphism/utils",
   "license": "MIT",
-  "version": "0.0.2-alpha.52+ad112f6",
-  "gitHead": "ad112f6a9459395cb01e376bd8ad562498a9cee1",
+  "version": "0.0.2-alpha.54+486a9b8",
+  "gitHead": "486a9b8e6f39033bb672636d5f39fe1a2b5e9aa2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.lib.json",
-    "prepublishOnly": "yarn generate"
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "@morphism/fp": "^0.3.1",
