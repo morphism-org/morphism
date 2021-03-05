@@ -2,7 +2,9 @@
   "private": true,
   "name": "morphism",
   "scripts": {
-    "fp": "yarn workspace @morphism/fp"
+    "fp": "yarn workspace @morphism/fp",
+    "runtime": "yarn workspace @morphism/runtime",
+    "utils": "yarn workspace @morphism/utils"
   },
   "workspaces": [
     "packages/*"

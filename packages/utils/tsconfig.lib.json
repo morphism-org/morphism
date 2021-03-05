@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["./src/**/*"],
+  "exclude": ["./scripts/**/*"],
+  "compilerOptions": {
+    "declaration": true,
+    "removeComments": false,
+    "outDir": "./lib"
+  }
+}
