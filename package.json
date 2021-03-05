@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": " ^3.22.0",
+    "lerna": "^3.22.0",
     "yarn": "^1.22.10"
   }
 }
