@@ -1,4 +1,5 @@
 import { Either, pipe } from "@morphism/fp";
+import { Identity } from "@morphism/fp/lib/Generated";
 
 export const parse = (string: string): Either<Error, unknown> =>
   Either.parseJSON(string, onError);
@@ -12,12 +13,11 @@ export namespace Stringify {
 
   export namespace Always {
     export const short = (json: unknown): string =>
-      pipe(Stringify.short(json), Either.fold(defaultJSON, identity));
+      pipe(Stringify.short(json), Either.fold(defaultJSON, Identity.of));
 
     export const pretty = (json: unknown): string =>
-      pipe(Stringify.pretty(json), Either.fold(defaultJSON, identity));
+      pipe(Stringify.pretty(json), Either.fold(defaultJSON, Identity.of));
 
-    const identity = (s: string) => s;
     const defaultJSON = (): string => "{}";
   }
 }
