@@ -19,6 +19,7 @@
   "scripts": {
     "generate": "ts-node scripts/Generate.ts",
     "postgenerate": "prettier --write ./src/Generated.ts",
+    "prebuild": "rm -rf ./lib",
     "build": "yarn generate && tsc --project tsconfig.lib.json",
     "prepublishOnly": "yarn generate"
   },

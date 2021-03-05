@@ -17,6 +17,7 @@
     "lodash": ">=4.17.19"
   },
   "scripts": {
+    "prebuild": "rm -rf ./lib",
     "build": "tsc --project tsconfig.lib.json",
     "prepublishOnly": "yarn build"
   },
