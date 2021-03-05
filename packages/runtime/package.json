@@ -17,7 +17,8 @@
     "lodash": ">=4.17.19"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.lib.json"
+    "build": "tsc --project tsconfig.lib.json",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "@morphism/fp": "^0.3.1",
