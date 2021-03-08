@@ -2,7 +2,7 @@
   "name": "@morphism/runtime",
   "description": "@morphism/runtime",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "gitHead": "486a9b8e6f39033bb672636d5f39fe1a2b5e9aa2",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib", "README.md"
+    "lib",
+    "README.md"
   ],
   "resolutions": {
     "lodash": ">=4.17.19"
@@ -28,7 +29,7 @@
     "io-ts-types": "^0.5.14"
   },
   "devDependencies": {
-    "@morphism/fp": "^0.3.2",
+    "@morphism/fp": "^0.3.3",
     "@types/node": "^14.14.11",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",

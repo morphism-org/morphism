@@ -2,7 +2,7 @@
   "name": "@morphism/fp",
   "description": "@morphism/fp",
   "license": "MIT",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "gitHead": "b656a4efc96c4265f1e391c809ca4b79dacb242a",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib", "README.md"
+    "lib",
+    "README.md"
   ],
   "resolutions": {
     "lodash": ">=4.17.19"
