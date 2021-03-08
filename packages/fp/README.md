@@ -12,15 +12,15 @@ Here's example using `TaskEither` from `fp-ts`:
 import { TaskEither } from "fp-ts/lib/TaskEither"
 import * as TE from "fp-ts/lib/TaskEither"
 
-const instance: TaskEither<Error, string> = ...
+const instance: TaskEither<E, A> = ...
 
 pipe(
   instance,
   TE.chain(...),
   TE.map(...),
   TE.fold(
-    () => ...,
-    () => ...
+    (e: E) => ...,
+    (a: A) => ...
   )
 )
 ```
@@ -36,8 +36,8 @@ pipe(
   TaskEither.chain(...),
   TaskEither.map(...),
   TaskEither.fold(
-    (e) => ...,
-    (a) => ...
+    (e: E) => ...,
+    (a: A) => ...
   )
 )
 ```
@@ -56,8 +56,8 @@ pipe(
   E.chain(...),
   E.map(...),
   E.fold(
-    (e) => ...,
-    (a) => ...
+    (e: E) => ...,
+    (a: A) => ...
   )
 )
 ```
@@ -74,8 +74,8 @@ pipe(
   Either.chain(...),
   Either.map(...),
   Either.fold(
-    (e) => ...,
-    (a) => ...
+    (e: E) => ...,
+    (a: A) => ...
   )
 )
 ```
