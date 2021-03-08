@@ -1,13 +1,13 @@
 # @morphism/fp
 
 A faithful re-export of [fp-ts](https://github.com/gcanti/fp-ts) that uses declaration merging to
-allow access to both a type, _and_ all methods on that type,
+allow access to both a type _and_ all methods on that type,
 using only a single import statement.
 
 
 ### Examples
 
-Here's example using `TaskEither` from `fp-ts`:
+Here's an example using `TaskEither` from `fp-ts`:
 ```typescript
 import { TaskEither } from "fp-ts/lib/TaskEither"
 import * as TE from "fp-ts/lib/TaskEither"
@@ -25,7 +25,7 @@ pipe(
 )
 ```
 
-Here's that same example using `TaskEither` from `@morphism/fp`:
+The equivalent using `TaskEither` from `@morphism/fp`:
 ```typescript
 import { TaskEither } from "@morphism/fp"
 
@@ -62,7 +62,7 @@ pipe(
 )
 ```
 
-And that same example using `Either` from `@morphism/fp`:
+The equivalent using `Either` from `@morphism/fp`:
 
 ```typescript
 import { Either } from "@morphism/fp"
