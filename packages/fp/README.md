@@ -1,6 +1,6 @@
 # @morphism/fp-ts
 
-A faithful re-export of `fp-ts` that uses declaration merging to
+A faithful re-export of [fp-ts](https://github.com/gcanti/fp-ts) that uses declaration merging to
 allow access to both a type, _and_ all methods on that type,
 using only a single import statement.
 

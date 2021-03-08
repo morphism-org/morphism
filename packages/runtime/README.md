@@ -1,7 +1,7 @@
 # @morphism/runtime
 
-A combination of `io-ts` and `io-ts-types`, exported under
-the `Runtime` namespace, that acts as an all-in-one input/output
+A combination of [io-ts](https://github.com/gcanti/io-ts) and [io-ts-types](https://github.com/gcanti/io-ts-types), exported under
+a namespace called `Runtime`, that acts as an all-in-one input/output
 validation library.
 
 <br/>
