@@ -4,7 +4,8 @@
   "exclude": ["./scripts/**/*"],
   "compilerOptions": {
     "declaration": true,
+    "module": "CommonJS",
     "removeComments": false,
-    "outDir": "./lib"
+    "outDir": "./lib/cjs"
   }
 }

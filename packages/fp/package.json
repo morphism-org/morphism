@@ -8,8 +8,13 @@
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "exports": {
+    "require": "./lib/cjs/index.js",
+    "import": "./lib/esm/index.js"
+  },
   "files": [
     "lib",
     "README.md"
@@ -19,9 +24,9 @@
   },
   "scripts": {
     "generate": "ts-node scripts/Generate.ts",
-    "postgenerate": "prettier --write ./src/Generated.ts",
-    "prebuild": "rm -rf ./lib",
-    "build": "yarn generate && tsc --project tsconfig.lib.json",
+    "postgenerate": "prettier --write src/Generated.ts",
+    "prebuild": "rimraf lib && yarn generate",
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
@@ -36,6 +41,7 @@
     "eslint-plugin-functional": "^3.1.0",
     "fp-ts": "^2.9.1",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
   }

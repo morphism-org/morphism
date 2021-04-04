@@ -1,5 +1,4 @@
-import { Either, pipe } from "@morphism/fp";
-import { Identity } from "@morphism/fp/lib/Generated";
+import { Either, pipe, Identity } from "@morphism/fp";
 
 export const parse = (string: string): Either<Error, unknown> =>
   Either.parseJSON(string, onError);
