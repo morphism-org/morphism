@@ -8,8 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
   },
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "files": [
     "lib",
