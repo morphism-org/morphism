@@ -69,7 +69,7 @@ const main = () =>
         Option.fromPredicate(shouldGenerate),
         Option.map((fileName) =>
           generateCode(
-            "esm",
+            "cjs",
             fileName.replace(".d.ts", ""),
             FileSystem.readFileSync(`${modulesPath()}/${fileName}`).toString()
           )
