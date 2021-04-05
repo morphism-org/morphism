@@ -8,9 +8,8 @@
     "type": "git",
     "url": "git+https://github.com/morphism-org/morphism.git"
   },
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "files": [
     "lib",
     "README.md"
@@ -22,7 +21,7 @@
     "generate": "ts-node scripts/Generate.ts",
     "postgenerate": "prettier --write src/Generated.ts",
     "prebuild": "rimraf lib && yarn generate",
-    "build": "tsc -p tsconfig.esm.json",
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
