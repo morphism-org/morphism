@@ -6,6 +6,6 @@
     "declaration": true,
     "module": "ES6",
     "removeComments": false,
-    "outDir": "./lib/esm"
+    "outDir": "./lib"
   }
 }
