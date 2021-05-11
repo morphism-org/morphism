@@ -1,6 +1,6 @@
 import { Either, TaskEither } from "@morphism/fp";
 import { Do as DoNotation } from "fp-ts-contrib/lib/Do";
-import { Option, Task } from "@morphism/fp/lib/Generated";
+import { Option, Task } from "@morphism/fp";
 
 export namespace Do {
   /**

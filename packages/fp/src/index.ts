@@ -1,3 +1,2 @@
 export * from "./Generated";
-export { flow } from "fp-ts/lib/function";
-export { pipe } from "fp-ts/lib/pipeable";
+export { flow, pipe } from "fp-ts/lib/function";
