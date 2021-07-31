@@ -19,12 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
-    // Allow imports like `import Moment from "moment";`
-    "esModuleInterop": true,
-
-    // Lets us use modules which have funky default exports
-    "allowSyntheticDefaultImports": true,
-
     // Lets us import JSON directly e.g. `import * as Data from "data.json";`
     "resolveJsonModule": true,
 
