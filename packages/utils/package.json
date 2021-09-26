@@ -2,7 +2,7 @@
   "name": "@morphism/utils",
   "description": "@morphism/utils",
   "license": "MIT",
-  "version": "0.1.6",
+  "version": "0.1.7-alpha.0",
   "gitHead": "486a9b8e6f39033bb672636d5f39fe1a2b5e9aa2",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "fp-ts-contrib": "^0.1.26"
   },
   "devDependencies": {
-    "@morphism/fp": "^0.3.8",
+    "@morphism/fp": "^0.3.10-alpha.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.10.1",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
