@@ -7,7 +7,7 @@ import * as ReadonlyArray from "fp-ts/lib/ReadonlyArray";
 import * as Option from "fp-ts/lib/Option";
 
 const modulesPath = () =>
-  Path.join(__dirname, "../../../node_modules/fp-ts/lib");
+  Path.join(__dirname, "../../../node_modules/fp-ts/es6");
 const outputPath = () => Path.join(__dirname, "../src/Generated.ts");
 
 const shouldGenerate = (fileName: string): boolean =>
@@ -18,9 +18,9 @@ const generateCode = (moduleName: string, moduleSource: string): string[] => {
   const reExport =
     moduleName === capitalized ? moduleName : `${moduleName} as ${capitalized}`;
 
-  const type = `export { ${reExport} } from "fp-ts/${moduleName}";`;
+  const type = `export { ${reExport} } from "fp-ts/es6/${moduleName}";`;
   const lines = [
-    `import * as ${capitalized}_ from "fp-ts/${moduleName}";`,
+    `import * as ${capitalized}_ from "fp-ts/es6/${moduleName}";`,
     `exports.${capitalized} = ${capitalized}_;`,
     `declare module "./Generated" { export const ${capitalized}: typeof ${capitalized}_; }\n`,
   ];
