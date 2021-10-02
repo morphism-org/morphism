@@ -1515,6 +1515,11 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
+"@morphism/fp@^0.3.8":
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/@morphism/fp/-/fp-0.3.8.tgz#0d9e7821e9824e53eb75b6f698bd3b69b11075c1"
+  integrity sha512-o40Je41XotaQlpv72MM/Y6t2bLicTDlW8Y85/cqeu+UH8La0SEkLG4B3BENA8XNR2JM0Atx6x9g5buWaK3Cz/Q==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

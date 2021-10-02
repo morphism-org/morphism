@@ -5,6 +5,8 @@
   "compilerOptions": {
     "declaration": true,
     "removeComments": false,
+    "module": "ESNext",
+    "target": "ESNext",
     "outDir": "./lib"
   }
 }

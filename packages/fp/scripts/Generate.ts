@@ -11,16 +11,16 @@ const modulesPath = () =>
 const outputPath = () => Path.join(__dirname, "../src/Generated.ts");
 
 const shouldGenerate = (fileName: string): boolean =>
-  fileName !== "index" && fileName.includes(".d.ts");
+  !fileName.includes("index") && fileName.includes(".d.ts")
 
 const generateCode = (moduleName: string, moduleSource: string): string[] => {
   const capitalized = moduleName.charAt(0).toUpperCase() + moduleName.slice(1);
   const reExport =
     moduleName === capitalized ? moduleName : `${moduleName} as ${capitalized}`;
 
-  const type = `export { ${reExport} } from "fp-ts/lib/${moduleName}";`;
+  const type = `export { ${reExport} } from "fp-ts/${moduleName}";`;
   const lines = [
-    `import * as ${capitalized}_ from "fp-ts/lib/${moduleName}";`,
+    `import * as ${capitalized}_ from "fp-ts/${moduleName}";`,
     `exports.${capitalized} = ${capitalized}_;`,
     `declare module "./Generated" { export const ${capitalized}: typeof ${capitalized}_; }\n`,
   ];
