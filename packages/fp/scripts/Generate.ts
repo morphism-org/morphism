@@ -18,11 +18,12 @@ const generateCode = (moduleName: string, moduleSource: string): string[] => {
   const reExport =
     moduleName === capitalized ? moduleName : `${moduleName} as ${capitalized}`;
 
-  const type = `export { ${reExport} } from "fp-ts/es6/${moduleName}";`;
+  const type = `export type { ${reExport} } from "fp-ts/es6/${moduleName}";`;
   const lines = [
-    `import * as ${capitalized}_ from "fp-ts/es6/${moduleName}";`,
-    `exports.${capitalized} = ${capitalized}_;`,
-    `declare module "./Generated" { export const ${capitalized}: typeof ${capitalized}_; }\n`,
+    `import * as ${capitalized} from "fp-ts/es6/${moduleName}";`,
+    `exports.${capitalized} = ${capitalized};`,
+    '\n'
+    // `declare module "./Generated" { export const ${capitalized}: typeof ${capitalized}_; }\n`,
   ];
 
   return moduleSource.match(
