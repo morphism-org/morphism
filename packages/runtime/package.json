@@ -23,13 +23,13 @@
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
-    "@morphism/fp": "0.3.8",
+    "@morphism/fp": "^0.4.0",
     "fp-ts": "^2.12.0",
     "io-ts": "^2.2.16",
     "io-ts-types": "^0.5.16"
   },
   "devDependencies": {
-    "@morphism/fp": "0.3.8",
+    "@morphism/fp": "^0.4.0",
     "@types/node": "^16.10.1",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
